@@ -2,7 +2,6 @@ import React from 'react'
 import GenresList from '../Constant/GenreList'
 import MovieList from './MovieList'
 
-
 const GenreMovieList=()=> {
   return (
     <div>

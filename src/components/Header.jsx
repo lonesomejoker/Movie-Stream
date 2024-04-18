@@ -1,17 +1,22 @@
 import React from "react";
-import { HiMagnifyingGlass, HiStar, HiTv } from "react-icons/hi2";
+import { HiStar, HiTv } from "react-icons/hi2";
 import { FaHome, FaPlus } from "react-icons/fa";
 import { CiMenuKebab } from "react-icons/ci";
 import HeaderItem from "./HeaderItem";
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
-import { Input } from 'antd';
+import { FaRegHeart } from "react-icons/fa6";
+import { useSelector } from "react-redux";
+import { Avatar, Badge, Input,Layout } from 'antd';
 const { Search } = Input;
 
-const onSearch = (value, _e, info) => console.log(info?.source, value);
+const onSearch = (value,_e,info) => console.log(info?.source, value);
 
-const Header = () => {
+const Header = ({showDrawer}) => {
   const [toggle, setToggle] = React.useState(false);
+  const {fav}=useSelector((state)=>state.favourite);
+  console.log("fav:",fav);
+  
   const menu = [
     {
       name: "HOME",
@@ -34,6 +39,8 @@ const Header = () => {
     },
   ];
   return (
+    <Layout className="fixed w-full z-10 text-white
+    bg-gradient-to-r from-neutral-800 to-black">
     <div className="flex items-center justify-between px-3 font-madimi py-2">
       <div className="flex items-center gap-8">
         <img src={logo} alt="Disney"
@@ -42,7 +49,9 @@ const Header = () => {
         {/* shown for medium + screen, hidden for small screen */}
         <div className=" hidden md:flex gap-8">
           {menu.map((item, idx) => (
-           <Link to={item.path}> <HeaderItem name={item.name} Icon={item.icon} key={idx}/></Link>
+
+           <Link to={item.path} key={idx}> <HeaderItem name={item.name} 
+           Icon={item.icon}/></Link>
           ))}
         </div>
 
@@ -69,7 +78,13 @@ const Header = () => {
         </div>
        
       </div>
+     
       <section className=" flex gap-x-2">
+      <Badge size="small" count={fav.length} className=" mr-3">
+      <Avatar shape="circle" size="medium" onClick={showDrawer} >
+        <FaRegHeart color="red" className=" size-4"/>
+      </Avatar>
+      </Badge>
       <Search className=" max-w-20 md:max-w-40 flex items-center h-7 bg-slate-400 rounded-md"
       placeholder="input search text"
       allowClear
@@ -80,6 +95,7 @@ const Header = () => {
       />
       </section>
     </div>
+    </Layout>
   );
 };
 

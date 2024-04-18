@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HeaderItem = ({name,Icon,path}) => {
+const HeaderItem = ({name,Icon}) => {
   return (
     <div className='flex items-center gap-1.5 text-lg hover:underline 
     underline-offset-8 mb-2'>
