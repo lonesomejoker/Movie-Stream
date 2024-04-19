@@ -27,7 +27,8 @@ const MultipleSlide = () => {
   };
   return (
     <div className=" my-4">
-      <Slider {...settings} className="max-w-[700px] md:max-w-[1315px] mx-auto ">
+      <Slider {...settings} className=" max-w-[310px] sm:max-w-[360px] md:max-w-[1000px] 
+      lg:max-w-[1285px] mx-auto">
         {movieList.map((item,idx) => (
           <div className=" px-0.5" key={idx}>
             <img

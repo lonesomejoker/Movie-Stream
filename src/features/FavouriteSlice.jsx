@@ -12,10 +12,12 @@ export const favSlice=createSlice({
         },
         removeItem:(state,action)=>{
             state.fav=state.fav.filter((item)=>item.id!==action.payload)
-        }
-        
+        },
+        showDetails:(state,action)=>{
+            state.fav=action.payload;
+        },
     },
 })
 
-export const{addToFav,removeItem}=favSlice.actions;
+export const{addToFav,removeItem,showDetails}=favSlice.actions;
 export default favSlice.reducer;

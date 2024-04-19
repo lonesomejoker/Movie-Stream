@@ -45,7 +45,7 @@ const ProductionHouse = () => {
       {productionHouseList.map((item,idx)=>{
         return(
             <div className=' border-[2px] border-gray-600 rounded-lg hover:scale-105 transition-all
-            duration-300 ease-in shadow-lg shadow-black max-w-56 lg:ml-2 h-28 lg:h-[127px]' key={idx} >
+            duration-300 ease-in shadow-lg shadow-black max-w-56 lg:ml-2 sm:h-24 lg:h-[127px] h-[50px]' key={idx} >
                 <img src={item.image} className=' z-10'/>
                 <video src={item.video} autoPlay loop playsInline className='relative sm:top-[-37px]
                 md:top-[-67px] lg:top-[-124px] 

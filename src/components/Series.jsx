@@ -4,8 +4,6 @@ import Header from './Header';
 
 const Series = () => {
     
-   
-    
   return (
     <Layout>
     <Header/>
