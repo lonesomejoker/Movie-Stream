@@ -27,14 +27,14 @@ const MultipleSlide = () => {
   };
   return (
     <div className=" my-4">
-      <Slider {...settings} className=" max-w-[310px] sm:max-w-[360px] md:max-w-[1000px] 
-      lg:max-w-[1285px] mx-auto">
+      <Slider {...settings} className=" max-w-[300px] sm:max-w-[590px] md:w-10/12
+      lg:max-w-[1200px] mx-auto">
         {movieList.map((item,idx) => (
           <div className=" px-0.5" key={idx}>
             <img
               src={IMAGE_BASE_URL + item.backdrop_path}
-              className="md:h-[260px] object-cover
-              rounded-md hover:border-[4px]
+              className="md:h-[200px] lg:h-[240px] object-cover
+              rounded-md hover:border-[4px] sm:h-[120px]
             border-gray-400 transition-all duration-100 ease-in"
             />
           </div>

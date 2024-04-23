@@ -24,10 +24,6 @@ const Header = ({showDrawer}) => {
       path:"/"
     },
     {
-      name: "WATCH LIST",
-      icon: FaPlus,
-    },
-    {
       name: "ORIGINALS",
       icon: HiStar,
       path:"*"
@@ -58,7 +54,7 @@ const Header = ({showDrawer}) => {
         {/* shown for small screen, hidden for medium + screens*/}
         <div className=" flex md:hidden gap-5">
           {menu.map(
-            (item, idx) =>idx < 3 && 
+            (item, idx) =>idx < 2 && 
             <HeaderItem name={""} Icon={item.icon} key={idx} />
           )}
 
@@ -68,7 +64,7 @@ const Header = ({showDrawer}) => {
             {toggle ? (
               <div className="absolute mt-3 border-2 px-3 py-5 bg-gray-950 z-10 text-white">
                 {menu.map(
-                  (item, idx) =>idx > 2 && (
+                  (item, idx) =>idx > 1 && (
                       <HeaderItem name={item.name} Icon={item.icon} key={idx} />
                     )
                 )}
