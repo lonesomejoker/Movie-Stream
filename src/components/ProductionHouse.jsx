@@ -48,7 +48,7 @@ const ProductionHouse = () => {
             duration-300 ease-in shadow-lg shadow-black max-w-56 lg:ml-2 sm:h-24 lg:h-[127px] h-[50px]' key={idx} >
                 <img src={item.image} className=' z-10'/>
                 <video src={item.video} autoPlay loop playsInline className='relative sm:top-[-64px]
-                md:top-[-67px] lg:top-[-93px] 
+                md:top-[-67px] lg:top-[-125px] 
                 rounded-md z-0 opacity-0 hover:opacity-50'/>
             </div>
         )

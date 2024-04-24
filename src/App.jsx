@@ -10,6 +10,7 @@ import { Drawer,ConfigProvider, Layout } from "antd";
 import Favourites from "./user/Favourites";
 import { Content } from "antd/es/layout/layout";
 import { Outlet } from "react-router-dom";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [open, setOpen] = React.useState(false);
@@ -47,8 +48,11 @@ const App = () => {
       <ProductionHouse />
       <GenreMovieList />
       </Content>
+      
     </div>
+     <Footer/>
     </Layout>
+
   );
 };
 

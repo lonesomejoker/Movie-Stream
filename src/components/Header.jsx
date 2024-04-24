@@ -26,7 +26,7 @@ const Header = ({showDrawer}) => {
     {
       name: "ORIGINALS",
       icon: HiStar,
-      path:"*"
+      path:"/originals"
     },
     {
       name: "SERIES",
