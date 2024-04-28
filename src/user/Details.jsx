@@ -1,7 +1,9 @@
 import { Button, Layout } from 'antd'
 import { useSelector } from 'react-redux'
 import Header from '../components/Header';
+import { Link } from 'react-router-dom';
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
+
 
 
 const Details = () => {
@@ -32,8 +34,8 @@ const Details = () => {
       })}
       </div>
       <div className=' text-center mt-8'>
-      <Button className=' bg-green-400 border-none rounded-sm w-1/4 font-varela text-white'>
-      Watch Now</Button>
+      <Link to="/subs"><Button className=' bg-green-400 border-none rounded-sm w-1/4 font-varela text-white'>
+      Watch Now</Button></Link>
       </div>
     </div>
   

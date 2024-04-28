@@ -4,3 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* .active{
+    
+    @apply block bg-gray-400 rounded-md;
+} */

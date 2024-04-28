@@ -1,6 +1,7 @@
 import { configureStore,combineReducers } from "@reduxjs/toolkit";
 import  favReducer  from "../features/FavouriteSlice";
 import detailReducer from "../features/DetailSlice";
+import authReducer from "../features/LoginSlice";
 import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist"
 
@@ -11,7 +12,8 @@ const persistConfig={
 }
 const reducer=combineReducers({
   favourite:favReducer,
-  detailslice:detailReducer
+  detailslice:detailReducer,
+  authslice:authReducer
   
 })
 
