@@ -15,7 +15,8 @@ const Signup = () => {
 
   return (
     <div className=" flex justify-center py-5">
-      <Card className=" max-w-[570px] min-h-96  bg-orange-200">
+      <Card className=" max-w-[570px] min-h-96 border-none 
+      bg-gradient-to-r from-emerald-300 to-black ">
         <h1 className=" font-madimi d pb-2 text-center font-bold text-base mb-3">
           <ExclamationCircleOutlined />
           SignUp

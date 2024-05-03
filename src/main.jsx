@@ -10,6 +10,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore } from 'redux-persist';
 import Loader from './components/Loader';
+import { AppContextProvider } from './components/context/ContextApi';
 
 let persistor=persistStore(store);
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -17,7 +18,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   
   <Provider store={store}>
     <PersistGate persistor={persistor}>
+    <AppContextProvider>
     <RouterProvider router={MainRouter} />
+    </AppContextProvider>
     </PersistGate>
   </Provider>
  

@@ -5,6 +5,8 @@ import {Esewa}  from "../services/Esewa"
 import { Card } from "antd";
 import KhaltiCheckout from 'khalti-checkout-web';
 import {Khalti} from '../services/Khalti'
+import { Link } from "react-router-dom";
+import { FaHouseChimney } from "react-icons/fa6";
 
 const Paymethod = () => {
   const [isPayment,setIsPayment]=React.useState({
@@ -40,9 +42,9 @@ const Paymethod = () => {
 
   return (
     <div className=" pt-3 text-center">
-      <h1>Choose how to pay</h1>
-      <Card className=" font-varela">
-      <div className=' flex items-center justify-center py-10'>
+      <h1 className=" text-lg">Choose how to pay</h1>
+      <Card className=" font-varela max-w-96  mx-auto">
+      <div className=' flex items-center justify-center py-10 gap-x-3'>
       
       {
         Payment.map((item,idx)=>{
@@ -65,6 +67,8 @@ const Paymethod = () => {
         } 
     
       </Card>
+      <Link to="/">
+      <FaHouseChimney className=" mx-auto h-16"/></Link>
 
       <Footer/>
     </div>

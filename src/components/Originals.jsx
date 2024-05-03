@@ -8,7 +8,7 @@ const Originals = () => {
     <div>
     <Layout className='bg-gradient-to-r from-zinc-600 via-neutral-800 to-black'>
     <Header/>
-      <h2 className=' mt-14 min-h-36'>Kei pani xaina Eta</h2>
+      <h2 className=' mt-14 min-h-36'>...Nothing to see here at the moment</h2>
      <Footer/>
       </Layout>
     </div>

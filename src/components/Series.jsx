@@ -14,6 +14,7 @@ const Series = () => {
     dispatch (fetchSeries());
    }, [dispatch])
    console.log("serie:", data);
+   
     
   return (
     <Layout className='bg-gradient-to-r from-zinc-600 via-neutral-800 to-black'>

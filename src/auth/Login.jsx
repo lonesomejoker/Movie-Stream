@@ -44,7 +44,7 @@ const Login = () => {
     <div className=" flex justify-center py-5">
       <Card
         className=" max-w-[540px] min-h-96 md:min-h-80 font-varela border-none 
-   bg-gradient-to-r from-purple-600 to-black"
+   bg-gradient-to-r from-gray-400 to-black"
       >
         <h1 className=" text-lg pb-4 font-bold">Login</h1>
         <div className=" flex">

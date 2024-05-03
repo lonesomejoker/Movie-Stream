@@ -35,15 +35,16 @@ const Header = ({showDrawer}) => {
       icon: FaHome,
       path:"/"
     },
-    {
-      name: "ORIGINALS",
-      icon: HiStar,
-      path:"/originals"
-    },
+   
     {
       name: "SERIES",
       icon: HiTv,
       path:"/series"
+    },
+    {
+      name: "ORIGINALS",
+      icon: HiStar,
+      path:"/originals"
     },
   ];
   return (
