@@ -11,10 +11,7 @@ const getTrendingVideos=axios.get(movieBaseUrl+
     const getMovieByGenreId=(id)=>
     axios.get(movieByGenreBaseURL+"&with_genres="+id)
 
-const getSeries=axios.get("https://www.episodate.com/api/most-popular?page=1")
-
 export default{
     getTrendingVideos,
     getMovieByGenreId,
-    getSeries
 }

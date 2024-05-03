@@ -4,6 +4,7 @@ import detailReducer from "../features/DetailSlice";
 import authReducer from "../features/LoginSlice";
 import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist"
+import seriesReducer from "../features/SeriesSlice";
 
 const persistConfig={
   key:root,
@@ -13,7 +14,8 @@ const persistConfig={
 const reducer=combineReducers({
   favourite:favReducer,
   detailslice:detailReducer,
-  authslice:authReducer
+  authslice:authReducer,
+  allseries:seriesReducer
   
 })
 

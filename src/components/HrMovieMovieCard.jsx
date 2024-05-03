@@ -14,7 +14,8 @@ const HrMovieMovieCard = ({ movie }) => {
   const dispatch=useDispatch();
   return (
     <div>
-     <section onClick={()=>handleDetail(movie)}>
+     <section onClick={()=>handleDetail(movie)} onMouseEnter={() => setIsHovered(movie.id)}
+      onMouseLeave={() => setIsHovered(null)}>
       <img src={IMAGE_BASE_URL + movie.backdrop_path}
         className=" w-28 md:w-64 rounded-md 
     border-color-gray-300 hover:border-[3px] hover:scale-105 transition-all 

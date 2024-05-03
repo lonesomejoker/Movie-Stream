@@ -1,16 +1,20 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./App.css";
 
-import GenreMovieList from "./components/GenreMovieList";
+//import GenreMovieList from "./components/GenreMovieList";
 import Header from "./components/Header";
-import MultipleSlide from "./components/MultipleSlide";
+//import MultipleSlide from "./components/MultipleSlide";
 import ProductionHouse from "./components/ProductionHouse";
-import Series from "./components/Series";
 import { Drawer,ConfigProvider, Layout } from "antd";
 import Favourites from "./user/Favourites";
 import { Content } from "antd/es/layout/layout";
 import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
+import Loader from "./components/Loader";
+const MultipleSlide = React.lazy(() => import('./components/MultipleSlide'));
+const GenreMovieList = React.lazy(() => import('./components/GenreMovieList'));
+
+
 
 const App = () => {
   const [open, setOpen] = React.useState(false);
@@ -42,11 +46,17 @@ const App = () => {
         )}
       </div>
       </ConfigProvider>
+     
+      
       <Content className=" mt-16">
       <Outlet/>
+      <Suspense fallback={<Loader/>}>
       <MultipleSlide />
+      </Suspense>
       <ProductionHouse />
+      <Suspense fallback={<Loader/>}>
       <GenreMovieList />
+      </Suspense>
       </Content>
       
     </div>

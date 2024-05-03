@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { showData } from '../features/DetailSlice';
 
 const MovieCard = ({movie}) => {
+  const [isHovered, setIsHovered] = React.useState(null);
   const navigate=useNavigate();
   const handleDetail=(movie)=>{
     dispatch(showData([movie]));
@@ -15,11 +16,13 @@ const MovieCard = ({movie}) => {
   const dispatch=useDispatch();
   return (
     <div>
-      <section  onClick={()=>handleDetail(movie)}>
+      <section  >
       <img src={IMAGE_BASE_URL+movie.poster_path} className=' w-28 md:w-64 rounded-md
-      hover:border-[3px] hover:scale-105
-       border-color-gray-300 transition-all duration-150 ease-in'/>
+      hover:border-[3px] hover:scale-105 border-color-gray-300 transition-all duration-150 
+      ease-in' onClick={()=>handleDetail(movie)} onMouseEnter={() => setIsHovered(movie.id)}
+      onMouseLeave={() => setIsHovered(null)}/>
        </section>
+     
       <button className="bg-gray-500 w-28 md:w-64 my-2 rounded
        py-2 opacity-65 backdrop-blur-md font-madimi text-[8px] md:text-[16px] "
        onClick={()=>dispatch(addToFav(movie))}>Add to Favourites</button>
