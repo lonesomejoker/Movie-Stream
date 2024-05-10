@@ -21,18 +21,9 @@ const Series = () => {
     <Header/>
     <Skeleton loading={loading}>
     <Content className=' mt-20 mb-6 font-varela px-3'>
-      <div className=' grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 px-6 gap-y-2 text-white'>
-        {
-          data.tv_shows.map((item)=>{
-            return (
-              <div className=' mx-auto text-center'>
-                <img src={item.image_thumbnail_path} className=' md:h-[330px] h-[200px] rounded'/>
-                <h1>{item.name}</h1>
-              </div>
-            )
-          })
-        }
-      </div>
+      
+       <p>Nothing at the moment</p>
+   
     </Content>
     </Skeleton>
 
